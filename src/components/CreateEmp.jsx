@@ -1,7 +1,12 @@
 const CreateEmp = () => {
-    return ( <>
-        <h1>Create Emp</h1>
-    </> );
+    return (
+        <div className="container">
+                 <input type="text" name="username" placeholder="Username" ref={username} />
+                 <input type="password" name="password" placeholder="Password" ref={password} />
+                 <button type="submit" onClick={(e)=>{e.preventDefault();handleLogin()}} >Login</button>
+        </div>
+
+      );
 }
  
 export default CreateEmp;

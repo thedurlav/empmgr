@@ -16,10 +16,12 @@ const AdminLogin = () => {
         axios.post("http://localhost:8080/login",data).then((res)=>{
             console.log(res.data);
             localStorage.setItem("otp",res.data.otp)
+            setFirstVerify (true)
         }).catch((err)=>{
             console.log(err);
+            alert("invalid credentials")
         })
-        setFirstVerify (true)
+        
         }
         else{
             let storedOtp = localStorage.getItem("otp");
