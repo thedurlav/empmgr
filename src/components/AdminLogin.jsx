@@ -2,6 +2,7 @@ import { useRef, useState } from 'react';
 import adlog from '../adlog.jpg'
 import axios from 'axios'
 import {useNavigate} from 'react-router-dom'
+import {toast,ToastContainer} from 'react-toastify'
 const AdminLogin = () => {
     let username = useRef();
     let password = useRef();
@@ -19,7 +20,7 @@ const AdminLogin = () => {
             setFirstVerify (true)
         }).catch((err)=>{
             console.log(err);
-            alert("invalid credentials")
+            toast.warn("Invalid Credentials")
         })
         
         }
@@ -28,7 +29,7 @@ const AdminLogin = () => {
             if(otp.current.value == storedOtp )
                 navigate("/createEmp")
             else
-                alert("invalid otp try again")
+                toast.warn("invalid otp try again")
         }
        
     }
@@ -56,7 +57,9 @@ const AdminLogin = () => {
                 </form>
                 }
             </div>
+            
         </div>
+        <ToastContainer/>
     </>);
 }
  

@@ -5,12 +5,13 @@
   align-items: center;
   width: 100vw;
   height: 100vh;
+  background-color: #007bff;
 }
 
 /*admin login*/
 
 .container {
-  
+  background: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,7 +74,7 @@
 
 }
 .inner-container{
-  width: 80%;
+  width: auto;
   height: 85%;
 }
 
