@@ -1,8 +1,9 @@
-import { useRef, useState } from 'react';
+import { useContext, useRef, useState } from 'react';
 import adlog from '../adlog.jpg'
 import axios from 'axios'
 import {useNavigate} from 'react-router-dom'
 import {toast,ToastContainer} from 'react-toastify'
+
 const AdminLogin = () => {
     let username = useRef();
     let password = useRef();
@@ -18,6 +19,7 @@ const AdminLogin = () => {
             console.log(res.data);
             localStorage.setItem("otp",res.data.otp)
             setFirstVerify (true)
+          
         }).catch((err)=>{
             console.log(err);
             toast.warn("Invalid Credentials")

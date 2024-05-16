@@ -4,7 +4,7 @@ import logo from '../target.png'
 import { useEffect, useState } from "react";
 const Home = () => {
 
-
+   
     let [page,setPage] = useState(0)
     let pageChange = (n)=>{
         if(page!=n){
